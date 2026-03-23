@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mettinahole Swachhathon 5K — A community-driven run, clean village drive, and treasure hunt on Sunday, April 5, 2025. Run • Clean • Serve. Register Now!" />
+  <title>Mettinahole Swachhathon 5K | Run • Clean • Serve</title>
+
+  <!-- Preconnect fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<!-- ─ SCROLL PROGRESS ───────────────────────────────────── -->
+<div id="progress-bar" aria-hidden="true"></div>
+
+<!-- ─ STICKY HEADER ─────────────────────────────────────── -->
+<header id="header" role="banner">
+  <div class="container header-inner">
+
+    <!-- Logo -->
+    <a href="#hero" class="logo" aria-label="Mettinahole Swachhathon 5K — Home">
+      <span class="logo-main">METTINAHOLE 5K</span>
+      <span class="logo-sub">Swachhathon · April 5</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#activities">Activities</a>
+      <a href="#route">Route</a>
+      <a href="#prizes">Prizes</a>
+      <a href="#details">Details</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <!-- Header CTA + Hamburger -->
+    <div style="display:flex;align-items:center;gap:.75rem;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSctBddF2yOHPiCJJSam07ADwbaTq9UNQalcG7KZlfSd_G2PrQ/viewform"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-primary"
+         id="header-register-btn"
+         aria-label="Register Now for Mettinahole Swachhathon 5K">
+        Register Now ↗
+      </a>
+
+      <button class="hamburger" id="hamburger"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav Drawer -->
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+  <a href="#about">About</a>
+  <a href="#activities">Activities</a>
+  <a href="#route">Route</a>
+  <a href="#prizes">Prizes</a>
+  <a href="#details">Details</a>
+  <a href="#faq">FAQ &amp; Contact</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSctBddF2yOHPiCJJSam07ADwbaTq9UNQalcG7KZlfSd_G2PrQ/viewform"
+     target="_blank" rel="noopener noreferrer"
+     style="color:var(--clr-amber)">Register Now ↗</a>
+</nav>
+
+<!-- ─ HERO ──────────────────────────────────────────────── -->
+<section id="hero" aria-labelledby="hero-headline">
+  <div class="hero-parallax-bg"></div>
+  <div class="hero-pattern"></div>
+
+  <!-- Decorative floating orbs -->
+  <div class="hero-deco hero-deco-1" aria-hidden="true"></div>
+  <div class="hero-deco hero-deco-2" aria-hidden="true"></div>
+  <div class="hero-deco hero-deco-3" aria-hidden="true"></div>
+
+  <div class="container hero-content">
+    <!-- Badge -->
+    <div class="hero-badge reveal">
+      <span aria-hidden="true">🏃</span>
+      Village Heritage Meets Modern Fitness
+    </div>
+
+    <!-- Headline -->
+    <h1 class="hero-headline reveal delay-1" id="hero-headline">
+      METTINAHOLE<br />SWACHHATHON 5K
+    </h1>
+
+    <!-- Subheadline -->
+    <p class="hero-sub reveal delay-2" aria-label="Run Clean Serve">
+      Run &nbsp;•&nbsp; Clean &nbsp;•&nbsp; Serve
+    </p>
+
+    <!-- Description -->
+    <p class="hero-desc reveal delay-3">
+      Join us for a community-driven event that promotes health, cleanliness, and unity
+      in our village. Be part of a meaningful initiative where every step contributes to
+      a cleaner and stronger Mettinahole.
+    </p>
+
+    <!-- Quick Info Bar -->
+    <div class="quick-info reveal delay-4" role="list" aria-label="Event quick info">
+      <div class="quick-info-item" role="listitem">
+        <span class="icon" aria-hidden="true">📅</span>
+        Sunday, April 5
+      </div>
+      <div class="quick-info-item" role="listitem">
+        <span class="icon" aria-hidden="true">🕒</span>
+        6:30 AM
+      </div>
+      <div class="quick-info-item" role="listitem">
+        <span class="icon" aria-hidden="true">📍</span>
+        Mettinahole School Ground
+      </div>
+    </div>
+
+    <!-- Primary CTA -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSctBddF2yOHPiCJJSam07ADwbaTq9UNQalcG7KZlfSd_G2PrQ/viewform"
+       target="_blank" rel="noopener noreferrer"
+       class="btn btn-primary btn-pulse reveal delay-4"
+       id="hero-register-btn"
+       aria-label="Register Now — Mettinahole Swachhathon 5K">
+      <span aria-hidden="true">🏆</span>
+      Register Now — It's Free!
+    </a>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="scroll-cue" aria-hidden="true">
+    <span>Scroll</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>
+  </div>
+</section>
+
+<div class="section-divider" role="separator"></div>
+
+<!-- ─ ABOUT ─────────────────────────────────────────────── -->
+<section id="about" aria-labelledby="about-title">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Image side — stylized pottery illustration -->
+      <div class="about-image-wrap reveal-left">
+        <div class="pottery-graphic">
+          <div class="pottery-svg-wrap" aria-hidden="true">
+            <!-- Inline SVG pottery silhouette -->
+            <svg width="160" height="200" viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Pot body -->
+              <ellipse cx="80" cy="170" rx="55" ry="14" fill="rgba(124,84,50,.35)"/>
+              <path d="M30 130 Q20 100 35 80 Q50 60 80 55 Q110 60 125 80 Q140 100 130 130 Q115 155 80 162 Q45 155 30 130Z"
+                    fill="url(#potGrad)" opacity=".9"/>
+              <!-- Neck -->
+              <path d="M60 55 Q65 42 80 38 Q95 42 100 55"
+                    fill="none" stroke="rgba(212,98,42,.6)" stroke-width="3"/>
+              <!-- Rim -->
+              <ellipse cx="80" cy="38" rx="22" ry="7"
+                       fill="rgba(212,98,42,.5)" stroke="rgba(240,160,51,.6)" stroke-width="1.5"/>
+              <!-- Decorative band -->
+              <path d="M38 108 Q80 120 122 108" fill="none" stroke="rgba(240,160,51,.5)" stroke-width="2.5" stroke-dasharray="8 4"/>
+              <!-- Handle left -->
+              <path d="M35 100 Q18 95 20 115 Q22 130 38 125" fill="none" stroke="rgba(212,98,42,.7)" stroke-width="4" stroke-linecap="round"/>
+              <!-- Handle right -->
+              <path d="M125 100 Q142 95 140 115 Q138 130 122 125" fill="none" stroke="rgba(212,98,42,.7)" stroke-width="4" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="potGrad" x1="30" y1="55" x2="130" y2="165" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#c85a20" stop-opacity=".9"/>
+                  <stop offset="50%" stop-color="#d4622a" stop-opacity=".85"/>
+                  <stop offset="100%" stop-color="#7c4818" stop-opacity=".8"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <p class="pottery-label">Heritage of Mettinahole</p>
+        </div>
+      </div>
+
+      <!-- Text side -->
+      <div class="reveal-right">
+        <p class="section-label">About the Event</p>
+        <h2 class="section-title" id="about-title">
+          Rooted in Heritage,<br />Moving Towards Progress
+        </h2>
+        <p class="section-desc" style="margin-bottom:1.5rem;">
+          Mettinahole Swachhathon 5K is a village-level initiative aimed at promoting
+          fitness, environmental awareness, and community participation. Our village has
+          a rich heritage, especially known for its traditional pottery. Through this
+          event, we aim to connect our cultural roots with modern responsibility.
+        </p>
+
+        <ul class="about-bullets" role="list">
+          <li>
+            <span class="bullet-icon" aria-hidden="true">🏃</span>
+            A 5K run open for all age groups
+          </li>
+          <li>
+            <span class="bullet-icon" aria-hidden="true">🌿</span>
+            A clean village drive — protecting our environment
+          </li>
+          <li>
+            <span class="bullet-icon" aria-hidden="true">🗺️</span>
+            A fun and engaging treasure hunt across the village
+          </li>
+        </ul>
+
+        <p class="about-closing">
+          "Together, let's build a clean, healthy, and united village."
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider" role="separator"></div>
+
+<!-- ─ ACTIVITIES ─────────────────────────────────────────── -->
+<section id="activities" aria-labelledby="activities-title">
+  <div class="container">
+    <div style="text-align:center;" class="reveal">
+      <p class="section-label">Race &amp; Activities</p>
+      <h2 class="section-title" id="activities-title">Three Ways to Make a Difference</h2>
+      <p class="section-desc" style="margin-inline:auto;">
+        Every participant can choose their path — run, clean, or discover. All three are
+        woven into one unforgettable day.
+      </p>
+    </div>
+
+    <div class="activities-grid">
+
+      <!-- Card 1: 5K Run -->
+      <article class="activity-card card-run reveal delay-1">
+        <div class="card-icon-wrap" aria-hidden="true">🏃‍♂️</div>
+        <h3 class="card-title">5K Run</h3>
+        <ul class="card-features" role="list">
+          <li>Open for all age groups</li>
+          <li>Separate Men &amp; Women categories</li>
+          <li>Certificates for every finisher</li>
+          <li>Cash prizes for top positions</li>
+        </ul>
+      </article>
+
+      <!-- Card 2: Clean Village Drive -->
+      <article class="activity-card card-clean reveal delay-2">
+        <div class="card-icon-wrap" aria-hidden="true">🌿</div>
+        <h3 class="card-title">Clean Village Drive</h3>
+        <ul class="card-features" role="list">
+          <li>Community cleanliness activity</li>
+          <li>Promote awareness about hygiene</li>
+          <li>Protect our natural environment</li>
+          <li>Earn recognition for participation</li>
+        </ul>
+      </article>
+
+      <!-- Card 3: Treasure Hunt -->
+      <article class="activity-card card-hunt reveal delay-3">
+        <div class="card-icon-wrap" aria-hidden="true">🗺️</div>
+        <h3 class="card-title">Treasure Hunt</h3>
+        <ul class="card-features" role="list">
+          <li>Clue-based game across the village</li>
+          <li>Fun and interactive experience</li>
+          <li>Exciting prizes to win</li>
+          <li>Explore Mettinahole's hidden spots</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;margin-top:3rem;" class="reveal">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSctBddF2yOHPiCJJSam07ADwbaTq9UNQalcG7KZlfSd_G2PrQ/viewform"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-primary"
+         id="activities-register-btn">
+        Join the Activities — Register Free ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider" role="separator"></div>
+
+<!-- ─ ROUTE MAP ───────────────────────────────────────────── -->
+<section id="route" aria-labelledby="route-title">
+  <div class="container">
+    <div class="route-wrap">
+
+      <!-- Map Visual -->
+      <div class="reveal-left">
+        <p class="section-label">Route Map</p>
+        <h2 class="section-title" id="route-title">The 5K Course</h2>
+        <p class="section-desc" style="margin-bottom:2rem;">
+          The run takes place across key roads in Mettinahole village, showcasing our
+          natural beauty and community landmarks.
+        </p>
+
+        <div class="map-placeholder" role="img" aria-label="Stylized route map for Mettinahole 5K run">
+          <!-- Animated SVG route -->
+          <svg class="map-svg-container" viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Grid background -->
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(200,160,80,.06)" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <rect width="400" height="280" fill="url(#grid)"/>
+            <!-- Route path -->
+            <path class="map-route-path"
+                  d="M 60 220 L 60 80 Q 60 60 80 60 L 200 60 Q 240 60 250 80 L 250 120 Q 250 140 270 140 L 340 140 Q 360 140 360 160 L 360 220 Q 360 240 340 240 L 80 240 Q 60 240 60 220"
+                  stroke="url(#routeGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Markers -->
+            <circle cx="60" cy="220" r="10" fill="url(#startGrad)" stroke="rgba(245,200,66,.6)" stroke-width="2"/>
+            <text x="75" y="225" fill="rgba(240,160,51,.9)" font-size="10" font-family="Outfit,sans-serif" font-weight="700">START / FINISH</text>
+            <!-- Landmark dots -->
+            <circle cx="200" cy="60" r="6" fill="rgba(74,155,111,.7)"/>
+            <text x="210" y="55" fill="rgba(74,155,111,.8)" font-size="9" font-family="Outfit,sans-serif">Checkpoint 1</text>
+            <circle cx="340" cy="140" r="6" fill="rgba(74,155,111,.7)"/>
+            <text x="310" y="130" fill="rgba(74,155,111,.8)" font-size="9" font-family="Outfit,sans-serif">Checkpoint 2</text>
+            <!-- Route arrow -->
+            <text x="150" y="50" fill="rgba(240,160,51,.6)" font-size="12" font-family="Outfit,sans-serif">→</text>
+            <defs>
+              <linearGradient id="routeGrad" x1="0" y1="0" x2="400" y2="280" gradientUnits="userSpaceOnUse">
+                <stop offset="0%"   stop-color="#d4622a"/>
+                <stop offset="50%"  stop-color="#f0a033"/>
+                <stop offset="100%" stop-color="#4a9b6f"/>
+              </linearGradient>
+              <radialGradient id="startGrad">
+                <stop offset="0%"   stop-color="#f5c842"/>
+                <stop offset="100%"  stop-color="#d4622a"/>
+              </radialGradient>
+            </defs>
+          </svg>
+
+          <!-- Overlay label -->
+          <div class="map-inner">
+            <h3>Mettinahole School Ground</h3>
+            <p>Start &amp; Finish Point</p>
+            <div class="start-end-marker" aria-label="Start and end: Mettinahole School Ground">
+              <span aria-hidden="true">🏫</span> School Ground Loop
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Route Info -->
+      <div class="reveal-right">
+        <ul class="route-info-list" role="list" aria-label="Route instructions">
+          <li class="route-info-item">
+            <span class="route-info-icon" aria-hidden="true">📍</span>
+            <div>
+              <strong style="color:var(--clr-amber);display:block;margin-bottom:.2rem;">Starting &amp; Ending Point</strong>
+              Mettinahole School Ground
+            </div>
+          </li>
+          <li class="route-info-item">
+            <span class="route-info-icon" aria-hidden="true">📏</span>
+            <div>
+              <strong style="color:var(--clr-amber);display:block;margin-bottom:.2rem;">Distance</strong>
+              5 Kilometres across key village roads
+            </div>
+          </li>
+          <li class="route-info-item">
+            <span class="route-info-icon" aria-hidden="true">🚩</span>
+            <div>
+              <strong style="color:var(--clr-amber);display:block;margin-bottom:.2rem;">Marked Route</strong>
+              Follow the clearly marked route signs and volunteer guidance
+            </div>
+          </li>
+          <li class="route-info-item">
+            <span class="route-info-icon" aria-hidden="true">🤝</span>
+            <div>
+              <strong style="color:var(--clr-amber);display:block;margin-bottom:.2rem;">Volunteer Support</strong>
+              Cooperate with our volunteers at every checkpoint
+            </div>
+          </li>
+          <li class="route-info-item">
+            <span class="route-info-icon" aria-hidden="true">⚠️</span>
+            <div>
+              <strong style="color:var(--clr-amber);display:block;margin-bottom:.2rem;">Discipline</strong>
+              Maintain discipline throughout the course
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider" role="separator"></div>
+
+<!-- ─ PRIZES ─────────────────────────────────────────────── -->
+<section id="prizes" aria-labelledby="prizes-title">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <p class="section-label">Prizes &amp; Recognition</p>
+      <h2 class="section-title" id="prizes-title">Win Big, Run Proud</h2>
+      <p class="prizes-tagline">Separate prizes for Men &amp; Women categories</p>
+    </div>
+
+    <div class="prizes-grid">
+
+      <!-- 1st Prize -->
+      <div class="prize-card prize-gold reveal delay-1">
+        <span class="prize-medal" aria-hidden="true">🥇</span>
+        <p class="prize-rank">1st Prize</p>
+        <p class="prize-amount">
+          ₹<span data-counter="3000" data-prefix="" data-suffix="" data-duration="1600">3000</span>
+        </p>
+        <p class="prize-note">Men &amp; Women categories</p>
+      </div>
+
+      <!-- 2nd Prize -->
+      <div class="prize-card prize-silver reveal delay-2">
+        <span class="prize-medal" aria-hidden="true">🥈</span>
+        <p class="prize-rank">2nd Prize</p>
+        <p class="prize-amount">
+          ₹<span data-counter="2000" data-prefix="" data-suffix="" data-duration="1600">2000</span>
+        </p>
+        <p class="prize-note">Men &amp; Women categories</p>
+      </div>
+
+    </div>
+
+    <!-- Certificate note -->
+    <div style="text-align:center;" class="reveal">
+      <div class="prizes-certs" role="note">
+        <span aria-hidden="true">🎓</span>
+        Participation Certificates for All Finishers
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:2.5rem;" class="reveal">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSctBddF2yOHPiCJJSam07ADwbaTq9UNQalcG7KZlfSd_G2PrQ/viewform"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-primary"
+         id="prizes-register-btn">
+        <span aria-hidden="true">🏆</span> Compete for Prizes — Register Free ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider" role="separator"></div>
+
+<!-- ─ EVENT DETAILS & RULES ──────────────────────────────── -->
+<section id="details" aria-labelledby="details-title">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Event Details &amp; Rules</p>
+      <h2 class="section-title" id="details-title">Everything You Need to Know</h2>
+    </div>
+
+    <div class="tabs-wrap reveal">
+      <!-- Tab Buttons -->
+      <div class="tab-buttons" role="tablist" aria-label="Event Details tabs">
+        <button class="tab-btn" data-tab="info" role="tab" aria-selected="true"  aria-controls="tab-info"  id="tab-btn-info">
+          📋 Event Details
+        </button>
+        <button class="tab-btn" data-tab="rules" role="tab" aria-selected="false" aria-controls="tab-rules" id="tab-btn-rules">
+          📜 Rules
+        </button>
+      </div>
+
+      <!-- Tab: Info -->
+      <div id="tab-info" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-info">
+        <div class="detail-row">
+          <span class="detail-label">📅 Date</span>
+          <span class="detail-val">Sunday, April 5, 2025</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">🕒 Time</span>
+          <span class="detail-val">
+            Flag-off: <strong>6:30 AM</strong><br />
+            Reporting: <strong>6:00 AM</strong>
+            <em style="display:block;font-size:.8rem;color:var(--clr-muted);margin-top:.2rem;">⏰ Arrive early for smooth coordination!</em>
+          </span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">📍 Venue</span>
+          <span class="detail-val">Mettinahole School Ground, Mettinahole Village</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">💰 Entry Fee</span>
+          <span class="detail-val" style="color:var(--clr-leaf);font-weight:700;">FREE — No registration fee!</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">🏅 Categories</span>
+          <span class="detail-val">Open for all age groups · Separate Men &amp; Women</span>
+        </div>
+      </div>
+
+      <!-- Tab: Rules -->
+      <div id="tab-rules" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-rules">
+        <ul class="rules-list" role="list">
+          <li class="rule-item">
+            <span class="rule-num">01</span>
+            Follow the designated route at all times
+          </li>
+          <li class="rule-item">
+            <span class="rule-num">02</span>
+            Do not litter — keep Mettinahole clean!
+          </li>
+          <li class="rule-item">
+            <span class="rule-num">03</span>
+            Respect volunteers and their instructions
+          </li>
+          <li class="rule-item">
+            <span class="rule-num">04</span>
+            Wear appropriate sports attire and shoes
+          </li>
+          <li class="rule-item">
+            <span class="rule-num">05</span>
+            Maintain discipline throughout the event
+          </li>
+        </ul>
+        <div class="rule-warn" role="alert">
+          ⚠️ Failure to follow the rules may result in disqualification.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider" role="separator"></div>
+
+<!-- ─ FAQ & CONTACT ──────────────────────────────────────── -->
+<section id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">FAQ &amp; Contact</p>
+      <h2 class="section-title" id="faq-title">Got Questions? We've Got Answers.</h2>
+    </div>
+
+    <div class="faq-contact-grid">
+
+      <!-- FAQ Accordion -->
+      <div class="reveal-left">
+        <div class="accordion" role="list" aria-label="Frequently asked questions">
+
+          <div class="accordion-item" role="listitem">
+            <button class="accordion-trigger" aria-expanded="false" id="faq-q1" aria-controls="faq-a1">
+              <span>Who can participate in the event?</span>
+              <span class="accordion-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="accordion-body" id="faq-a1" role="region" aria-labelledby="faq-q1">
+              <div class="accordion-body-inner">
+                Anyone can participate! The event is open to all age groups from our village and beyond.
+                We welcome families, students, and elders alike.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" role="listitem">
+            <button class="accordion-trigger" aria-expanded="false" id="faq-q2" aria-controls="faq-a2">
+              <span>Is there a registration fee?</span>
+              <span class="accordion-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="accordion-body" id="faq-a2" role="region" aria-labelledby="faq-q2">
+              <div class="accordion-body-inner">
+                Absolutely <strong style="color:var(--clr-leaf);">FREE</strong>! There is no registration fee.
+                Simply fill the Google Form and you're in. No cost, all community spirit!
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" role="listitem">
+            <button class="accordion-trigger" aria-expanded="false" id="faq-q3" aria-controls="faq-a3">
+              <span>What should I wear / bring?</span>
+              <span class="accordion-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="accordion-body" id="faq-a3" role="region" aria-labelledby="faq-q3">
+              <div class="accordion-body-inner">
+                Wear comfortable sports attire and running shoes. Bring a water bottle if you can.
+                Light, breathable clothing is recommended as the run begins at 6:30 AM.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" role="listitem">
+            <button class="accordion-trigger" aria-expanded="false" id="faq-q4" aria-controls="faq-a4">
+              <span>Will I get a certificate?</span>
+              <span class="accordion-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="accordion-body" id="faq-a4" role="region" aria-labelledby="faq-q4">
+              <div class="accordion-body-inner">
+                Yes! Every participant who completes the event will receive a participation certificate.
+                It's our way of honoring your commitment to the community.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" role="listitem">
+            <button class="accordion-trigger" aria-expanded="false" id="faq-q5" aria-controls="faq-a5">
+              <span>What time should I arrive?</span>
+              <span class="accordion-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="accordion-body" id="faq-a5" role="region" aria-labelledby="faq-q5">
+              <div class="accordion-body-inner">
+                Please arrive by <strong style="color:var(--clr-amber);">6:00 AM</strong> for registration and warm-up.
+                The run officially starts at 6:30 AM. Early arrival ensures smooth coordination for everyone.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Contact Card -->
+      <div class="reveal-right">
+        <div class="contact-card">
+          <div>
+            <p class="footer-col-title">Contact Us</p>
+            <p class="contact-intro">Have more questions? Reach out — we are happy to assist you!</p>
+          </div>
+          <div class="contact-numbers">
+            <a href="tel:+919606320599" class="contact-link" aria-label="Call 96063 20599">
+              <span aria-hidden="true">📞</span>
+              96063 20599
+            </a>
+            <a href="tel:+919353493699" class="contact-link" aria-label="Call 93534 93699">
+              <span aria-hidden="true">📞</span>
+              93534 93699
+            </a>
+          </div>
+          <p class="contact-happy">✨ We are happy to assist you.</p>
+
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSctBddF2yOHPiCJJSam07ADwbaTq9UNQalcG7KZlfSd_G2PrQ/viewform"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-primary"
+             id="contact-register-btn"
+             style="width:100%;justify-content:center;">
+            Register Now ↗
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider" role="separator"></div>
+
+<!-- ─ FOOTER ─────────────────────────────────────────────── -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-main">METTINAHOLE 5K</span>
+          <span class="logo-sub">Swachhathon · April 5</span>
+        </div>
+        <p class="footer-tagline">
+          Organized by Team Mettinahole<br />
+          Rooted in Heritage, Moving Towards Progress.
+        </p>
+        <div style="margin-top:1.25rem;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSctBddF2yOHPiCJJSam07ADwbaTq9UNQalcG7KZlfSd_G2PrQ/viewform"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-outline"
+             id="footer-register-btn"
+             style="font-size:.85rem;padding:.6rem 1.4rem;">
+            Register Now ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <p class="footer-col-title">Quick Links</p>
+        <ul class="footer-links" role="list">
+          <li><a href="#about">About the Event</a></li>
+          <li><a href="#activities">Race &amp; Activities</a></li>
+          <li><a href="#route">Route Map</a></li>
+          <li><a href="#prizes">Prizes &amp; Recognition</a></li>
+          <li><a href="#details">Event Details</a></li>
+          <li><a href="#faq">FAQ &amp; Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <ul class="footer-links" role="list">
+          <li>
+            <a href="tel:+919606320599" aria-label="Call 96063 20599">
+              📞 96063 20599
+            </a>
+          </li>
+          <li>
+            <a href="tel:+919353493699" aria-label="Call 93534 93699">
+              📞 93534 93699
+            </a>
+          </li>
+          <li style="margin-top:.5rem;color:var(--clr-muted);font-size:.82rem;">
+            📅 Sunday, April 5
+          </li>
+          <li style="color:var(--clr-muted);font-size:.82rem;">
+            🕒 6:30 AM | 📍 School Ground
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider" />
+
+    <div class="footer-bottom">
+      <span>© 2025 Mettinahole Swachhathon 5K. All rights reserved.</span>
+      <span style="color:var(--clr-amber);">Run • Clean • Serve</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ─ BACK TO TOP ─────────────────────────────────────────── -->
+<button id="back-top" aria-label="Back to top">↑</button>
+
+<!-- ─ SCRIPTS ─────────────────────────────────────────────── -->
+<script src="script.js"></script>
+</body>
+</html>
