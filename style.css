@@ -571,6 +571,17 @@ section { padding: 5rem 0; }
 /* ── RACE & ACTIVITIES ───────────────────────────────────── */
 #activities {
   background: var(--clr-bg);
+  position: relative;
+  overflow: hidden;
+}
+#activities::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 40% at 20% 60%, rgba(212,98,42,.08) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 80% 40%, rgba(74,155,111,.06) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .activities-grid {
@@ -579,26 +590,64 @@ section { padding: 5rem 0; }
   margin-top: 3rem;
 }
 
+/* ── Activity Card — Premium Glassmorphism ── */
 .activity-card {
-  background: var(--clr-surface);
-  border: 1px solid var(--clr-border);
+  background: linear-gradient(160deg, rgba(35,30,24,.95) 0%, rgba(22,19,15,.98) 100%);
+  border: 1px solid var(--clr-accent-border, rgba(212,98,42,.35));
+  border-top: 3px solid var(--clr-accent-border, rgba(212,98,42,.6));
   border-radius: var(--radius-md);
   padding: 2rem 1.75rem;
   position: relative;
   overflow: hidden;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  box-shadow:
+    0 4px 24px rgba(0,0,0,.3),
+    inset 0 1px 0 rgba(255,255,255,.04);
+  animation: card-breathe 4s ease-in-out infinite;
 }
+
+/* Breathing glow animation */
+@keyframes card-breathe {
+  0%, 100% { box-shadow: 0 4px 24px rgba(0,0,0,.3), 0 0 0 rgba(var(--glow-rgb, 212,98,42), 0), inset 0 1px 0 rgba(255,255,255,.04); }
+  50%      { box-shadow: 0 4px 24px rgba(0,0,0,.3), 0 0 30px rgba(var(--glow-rgb, 212,98,42), .12), inset 0 1px 0 rgba(255,255,255,.04); }
+}
+
+/* Inner gradient glow overlay */
 .activity-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--clr-accent, rgba(212,98,42,.06)) 0%, transparent 60%);
+  background:
+    linear-gradient(135deg, var(--clr-accent, rgba(212,98,42,.1)) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, var(--clr-accent, rgba(212,98,42,.06)) 0%, transparent 50%);
   transition: opacity var(--transition);
+  opacity: 1;
 }
+
+/* Shimmer sweep on hover */
+.activity-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.05) 50%, transparent 100%);
+  transition: left .6s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.activity-card:hover::after {
+  left: 130%;
+}
+
 .activity-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--clr-accent-border, rgba(212,98,42,.5));
-  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--clr-accent-border, rgba(212,98,42,.7));
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.5),
+    0 0 40px var(--clr-accent, rgba(212,98,42,.15)),
+    inset 0 1px 0 rgba(255,255,255,.06);
+  animation: none;
 }
 
 .card-icon-wrap {
@@ -610,13 +659,16 @@ section { padding: 5rem 0; }
   justify-content: center;
   font-size: 1.8rem;
   margin-bottom: 1.25rem;
-  background: rgba(212,98,42,.12);
-  border: 1px solid rgba(212,98,42,.25);
+  background: rgba(212,98,42,.15);
+  border: 1px solid rgba(212,98,42,.35);
   transition: var(--transition);
+  position: relative;
+  z-index: 2;
 }
 .activity-card:hover .card-icon-wrap {
-  background: rgba(212,98,42,.2);
-  transform: scale(1.1) rotate(-5deg);
+  background: rgba(212,98,42,.25);
+  transform: scale(1.12) rotate(-5deg);
+  box-shadow: 0 0 20px var(--clr-accent, rgba(212,98,42,.25));
 }
 
 .card-title {
@@ -624,12 +676,16 @@ section { padding: 5rem 0; }
   font-weight: 800;
   margin-bottom: .75rem;
   color: var(--clr-cream);
+  position: relative;
+  z-index: 2;
 }
 
 .card-features {
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  position: relative;
+  z-index: 2;
 }
 .card-features li {
   font-size: .9rem;
@@ -637,6 +693,10 @@ section { padding: 5rem 0; }
   display: flex;
   align-items: center;
   gap: .5rem;
+  transition: color .25s ease;
+}
+.activity-card:hover .card-features li {
+  color: var(--clr-cream);
 }
 .card-features li::before {
   content: '▸';
@@ -644,21 +704,37 @@ section { padding: 5rem 0; }
   font-size: .75rem;
 }
 
-/* Card accent colors */
-.card-run   { --clr-accent: rgba(212,98,42,.08); --clr-accent-border: rgba(212,98,42,.5); }
-.card-run .card-icon-wrap { background: rgba(212,98,42,.12); border-color: rgba(212,98,42,.3); }
+/* ── Card accent colors & glow ── */
+.card-run   {
+  --clr-accent: rgba(212,98,42,.12);
+  --clr-accent-border: rgba(212,98,42,.45);
+  --glow-rgb: 212,98,42;
+}
+.card-run .card-icon-wrap { background: rgba(212,98,42,.15); border-color: rgba(212,98,42,.4); }
 
-.card-clean { --clr-accent: rgba(74,155,111,.08); --clr-accent-border: rgba(74,155,111,.5); }
-.card-clean .card-icon-wrap { background: rgba(74,155,111,.12); border-color: rgba(74,155,111,.3); }
-.card-clean:hover .card-icon-wrap { background: rgba(74,155,111,.2); }
+.card-clean {
+  --clr-accent: rgba(74,155,111,.12);
+  --clr-accent-border: rgba(74,155,111,.45);
+  --glow-rgb: 74,155,111;
+}
+.card-clean .card-icon-wrap { background: rgba(74,155,111,.15); border-color: rgba(74,155,111,.4); }
+.card-clean:hover .card-icon-wrap { background: rgba(74,155,111,.25); box-shadow: 0 0 20px rgba(74,155,111,.25); }
 
-.card-hunt  { --clr-accent: rgba(245,200,66,.08); --clr-accent-border: rgba(245,200,66,.5); }
-.card-hunt .card-icon-wrap { background: rgba(245,200,66,.12); border-color: rgba(245,200,66,.3); }
-.card-hunt:hover .card-icon-wrap { background: rgba(245,200,66,.2); }
+.card-hunt {
+  --clr-accent: rgba(245,200,66,.12);
+  --clr-accent-border: rgba(245,200,66,.45);
+  --glow-rgb: 245,200,66;
+}
+.card-hunt .card-icon-wrap { background: rgba(245,200,66,.15); border-color: rgba(245,200,66,.4); }
+.card-hunt:hover .card-icon-wrap { background: rgba(245,200,66,.25); box-shadow: 0 0 20px rgba(245,200,66,.25); }
 
-.card-video { --clr-accent: rgba(180,130,220,.08); --clr-accent-border: rgba(180,130,220,.5); }
-.card-video .card-icon-wrap { background: rgba(180,130,220,.12); border-color: rgba(180,130,220,.3); }
-.card-video:hover .card-icon-wrap { background: rgba(180,130,220,.2); }
+.card-video {
+  --clr-accent: rgba(180,130,220,.12);
+  --clr-accent-border: rgba(180,130,220,.45);
+  --glow-rgb: 180,130,220;
+}
+.card-video .card-icon-wrap { background: rgba(180,130,220,.15); border-color: rgba(180,130,220,.4); }
+.card-video:hover .card-icon-wrap { background: rgba(180,130,220,.25); box-shadow: 0 0 20px rgba(180,130,220,.25); }
 
 /* Prize badges on activity cards */
 .card-prizes {
@@ -666,24 +742,27 @@ section { padding: 5rem 0; }
   flex-wrap: wrap;
   gap: .5rem;
   margin-bottom: .75rem;
+  position: relative;
+  z-index: 2;
 }
 .card-prize {
   display: inline-flex;
   align-items: center;
   gap: .25rem;
-  padding: .25rem .75rem;
+  padding: .3rem .85rem;
   border-radius: 50px;
   font-size: .8rem;
   font-weight: 700;
 }
 .card-prize.gold {
-  background: rgba(245,200,66,.15);
-  border: 1px solid rgba(245,200,66,.35);
+  background: rgba(245,200,66,.18);
+  border: 1px solid rgba(245,200,66,.45);
   color: var(--clr-gold);
+  box-shadow: 0 0 12px rgba(245,200,66,.1);
 }
 .card-prize.silver {
-  background: rgba(192,192,210,.1);
-  border: 1px solid rgba(200,200,220,.3);
+  background: rgba(192,192,210,.12);
+  border: 1px solid rgba(200,200,220,.35);
   color: #c0c8d8;
 }
 
