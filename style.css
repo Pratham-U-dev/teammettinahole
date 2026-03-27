@@ -190,6 +190,19 @@ section { padding: 5rem 0; }
   flex-direction: column;
   line-height: 1;
 }
+.logo-img {
+  height: 44px;
+  width: auto;
+  border-radius: 50%;
+  object-fit: contain;
+  transition: transform var(--transition);
+}
+.logo:hover .logo-img {
+  transform: scale(1.08);
+}
+.footer-logo-img {
+  height: 56px;
+}
 .logo-main {
   font-size: 1.1rem;
   font-weight: 900;
@@ -643,6 +656,37 @@ section { padding: 5rem 0; }
 .card-hunt .card-icon-wrap { background: rgba(245,200,66,.12); border-color: rgba(245,200,66,.3); }
 .card-hunt:hover .card-icon-wrap { background: rgba(245,200,66,.2); }
 
+.card-video { --clr-accent: rgba(180,130,220,.08); --clr-accent-border: rgba(180,130,220,.5); }
+.card-video .card-icon-wrap { background: rgba(180,130,220,.12); border-color: rgba(180,130,220,.3); }
+.card-video:hover .card-icon-wrap { background: rgba(180,130,220,.2); }
+
+/* Prize badges on activity cards */
+.card-prizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: .75rem;
+}
+.card-prize {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  padding: .25rem .75rem;
+  border-radius: 50px;
+  font-size: .8rem;
+  font-weight: 700;
+}
+.card-prize.gold {
+  background: rgba(245,200,66,.15);
+  border: 1px solid rgba(245,200,66,.35);
+  color: var(--clr-gold);
+}
+.card-prize.silver {
+  background: rgba(192,192,210,.1);
+  border: 1px solid rgba(200,200,220,.3);
+  color: #c0c8d8;
+}
+
 /* Running animation on run card */
 @keyframes run-icon {
   0%,100% { transform: translateX(0); }
@@ -758,6 +802,27 @@ section { padding: 5rem 0; }
   max-width: 600px;
   margin: 0 auto 2.5rem;
 }
+.prizes-grid-4 {
+  max-width: 900px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* New prize card variants */
+.prize-green {
+  background: linear-gradient(145deg, rgba(74,155,111,.12), rgba(74,155,111,.06));
+  border-color: rgba(74,155,111,.4);
+}
+.prize-green:hover { box-shadow: 0 20px 60px rgba(74,155,111,.2); }
+.prize-green .prize-rank { color: var(--clr-leaf); }
+.prize-green .prize-amount { color: var(--clr-leaf); }
+
+.prize-amber {
+  background: linear-gradient(145deg, rgba(240,160,51,.12), rgba(245,200,66,.06));
+  border-color: rgba(240,160,51,.4);
+}
+.prize-amber:hover { box-shadow: 0 20px 60px rgba(240,160,51,.2); }
+.prize-amber .prize-rank { color: var(--clr-amber); }
+.prize-amber .prize-amount { color: var(--clr-amber); }
 
 .prize-card {
   border-radius: var(--radius-md);
@@ -1089,7 +1154,7 @@ section { padding: 5rem 0; }
 
   .about-grid   { grid-template-columns: 1fr 1fr; align-items: center; }
   .route-wrap   { grid-template-columns: 1.2fr 1fr; align-items: start; }
-  .activities-grid { grid-template-columns: repeat(3, 1fr); }
+  .activities-grid { grid-template-columns: repeat(4, 1fr); }
   .faq-contact-grid { grid-template-columns: 1.4fr 1fr; }
   .footer-grid  { grid-template-columns: 1.5fr 1fr 1fr; }
   .footer-bottom { flex-wrap: nowrap; }
